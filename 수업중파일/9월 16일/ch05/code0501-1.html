@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>회원가입</h2>
+    <!-- 141p -->
+    <form action="" name="register">
+        <fieldset>
+            <legend>필수 항목</legend>
+            <ul>
+                <li><label for="name">이름: <input type="text" name="name" id="name" required maxlength="5" size="25" autofocus></label></li>
+                <li><label for="email">이메일: <input type="email" name="email" id="email" size="23"></label></li>
+                <li><label for="password1">비밀번호: <input type="password" name="password1" id="password1"></label></li>
+                <li><label for="password2">비밀번호 확인: <input type="password" name="password2" id="password2" size="15"></label></li>
+                <li><label for="tel">전화번호: <input type="tel" name="tel" id="tel" placeholder="010-0000-0000"></label></li>
+                <li><label for="birth">생년월일: <input type="date" name="birth" id="birth"></label></li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>선택 항목</legend>
+            <ul>
+                <li><input type="radio" name="mailling" id="mailling_yes" value="mailling_yes"><label for="mailling_yes"> 메일 수신</label>
+                <input type="radio" name="mailling" id="mailling_no" value="mailling_no"><label for="mailling_no"> 메일 수신 거부</label></li>
+                <li><input type="checkbox" name="favorite" id="favsports" value="sports"><label for="favsports"> 스포츠</label>
+                <input type="checkbox" name="favorite" id="favit" value="it"><label for="favit"> 디지털 기기</label>
+                <input type="checkbox" name="favorite" id="favmovie" value="movie"><label for="favmovie"> 영화</label>
+                <li><label for="gender">성별 </label><select name="gender" id="gender">
+                    <option value="male">男 </option>
+                    <option value="female">女 </option>
+                </select></li>
+                </li>
+            </ul>
+        </fieldset>
+        <label for="memo">메모</label><br>
+        <textarea name="memo" id="memo" cols="30" rows="10"></textarea><br>
+        <input type="submit" value="제출"><input type="reset" value="초기화">
+    </form>
+</body>
+</html>
