@@ -1,0 +1,24 @@
+h2 {
+    background-color: pink;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    width: 490px;
+}
+table {
+    caption-side: bottom;
+    border: 2px solid rgb(202, 64, 87);
+    border-collapse: separate;
+    width: 500px;
+}
+th {
+    background-color: mistyrose;
+}
+td, th {
+    border: 1px dotted rgb(202, 64, 87);
+    padding: 7px;
+    text-align: center;
+}
+caption {
+    color: rgb(202, 64, 87);
+}
