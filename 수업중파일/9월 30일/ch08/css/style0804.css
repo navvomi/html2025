@@ -1,0 +1,22 @@
+a {
+    text-decoration: none;
+    color: palevioletred;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    width: 70px;
+    height: 30px;
+    border: 1.5px solid;
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+}
+.top_menu {
+    background-color: mistyrose;
+    padding: 10px;
+    width: 400px;
+    bottom: 20px;
+    position: absolute;
+}
