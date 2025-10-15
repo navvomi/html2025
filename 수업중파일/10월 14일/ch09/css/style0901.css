@@ -1,0 +1,24 @@
+body {
+    background-color:mistyrose
+}
+.boxstyle {
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+    padding: 20px;    
+}
+#box1 {
+    background-color: white;
+    background-clip: border-box;
+    border: 2px solid pink;
+}
+#box2 {
+    background-color: powderblue;
+    background-clip: padding-box;
+    border: 2px solid pink;
+}
+#box3 {
+    background-color: azure;
+    background-clip: content-box;
+    border: 2px solid pink;
+}
