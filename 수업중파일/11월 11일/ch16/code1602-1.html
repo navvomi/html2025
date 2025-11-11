@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산식 1</title>
+</head>
+<body>
+    <script>
+        let userNumber=parseInt(prompt('첫 번째 숫자 입력: '));
+        let userNumber2=parseInt(prompt('두 번째 숫자 입력: '));
+        let op=prompt('연산자 입력');
+        if(op=='+')
+            result=userNumber+userNumber2;
+        else if (op=='-')
+            result=userNumber-userNumber2;
+        else if (op=='*')
+            result=userNumber*userNumber2;
+        else
+            result=0;
+
+        console.log(`${userNumber} ${op} ${userNumber2} = ${result}`);
+    </script>
+</body>
+</html>
