@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보 게임</title>
+    <style>
+        h1 {
+            color: white;
+            background-color: pink;
+            width: 250px;
+            padding: 10px;
+        }
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .button-group button {
+            margin: 0 10px; 
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        #result {
+            color: #5f5f5f;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid pink;
+            min-width: 300px;
+            background-color: rgb(255, 237, 241);
+        }
+    </style>
+</head>
+<body>
+    <h1>가위바위보 게임</h1>
+    <p>아래 버튼 중 하나를 클릭하세요.</p>
+
+    <div class="button-group">
+        <button onclick="playGame(1)">가위 ✂️</button>
+        <button onclick="playGame(2)">바위 🪨</button>
+        <button onclick="playGame(3)">보 📄</button>
+    </div>
+
+    <hr>
+
+    <div id="result">여기에 게임 결과가 표시됩니다.</div>
+
+    <script>
+        function rockPaperScissors(userChoice) {
+            const computerChoice = Math.floor(Math.random() * 3) + 1;
+
+            const choicesMap = {
+                1: '가위',
+                2: '바위',
+                3: '보'
+            };
+
+            const userRPS = choicesMap[userChoice];
+            const computerRPS = choicesMap[computerChoice];
+            let result = '';
+
+            if (userChoice === computerChoice) {
+                result = '비겼습니다.';
+            } else if (
+                (userChoice === 1 && computerChoice === 3) ||
+                (userChoice === 2 && computerChoice === 1) || 바위(2) > 가위(1)
+                (userChoice === 3 && computerChoice === 2)
+            ) {
+                result = '🎉 당신이 이겼습니다!';
+            } else {
+                result = '당신이 졌습니다.';
+            }
+
+            return `당신의 선택: ${userRPS} | 컴퓨터의 선택: ${computerRPS} <br><br> 최종 결과: ${result}`;
+        }
+
+        function playGame(choice) {
+            const gameResult = rockPaperScissors(choice);
+            document.getElementById('result').innerHTML = gameResult;
+        }
+    </script>
+</body>
+</html>
