@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>독서 챌린지</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container{
+      width:300px;
+      height:300px;
+      border-radius:30%;
+      border:2px solid navy;
+      background-color: powderblue;
+      text-align: center;
+    }
+    h1 {
+      margin-top:70px;
+      color: steelblue;
+    }
+    .accent {
+      font-size:1.8em;
+      font-weight:bold;
+      color: navy;
+    }
+    p {
+      color: #1e48a5;
+    }
+  </style>
+</head>
+<body>
+  <div>
+        <button onclick="history.back()">뒤로가기</button>
+  </div>
+  <br>
+  <div class="container">
+    <h1>책 읽기</h1>
+    <p><span class="accent" id="result"></span> 일 연속으로 <br> 책 읽기를 달성하셨군요.</p>
+    <p>🎉 축하합니다!</p>
+  </div>
+  <br>
+
+  <script>
+    let now = new Date();
+    let firstDay = new Date("2025-10-13");
+
+    let toNow = now.getTime(); 
+    let toFirst = firstDay.getTime();
+    let passedTime = toNow - toFirst; 
+
+    passedTime = Math.round(passedTime/(1000*60*60*24));
+
+    document.querySelector('#result').innerText = passedTime;
+  </script>
+</body>
+</html>

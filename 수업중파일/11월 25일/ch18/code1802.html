@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="history.back()">뒤로가기</button>
+    </div>
+    <script>
+        function openCenter(doc, win, width, height) {
+            let left=(screen.availWidth-width)/2;
+            let top=(screen.availHeight-height)/2;
+            let opt=`left=${left}, top=${top}, width=${width}, height=${height}`;
+            window.open(doc, win, opt)
+        }
+
+        openCenter('notice.html', 'pop', 500, 400);
+    </script>
+</body>
+</html>

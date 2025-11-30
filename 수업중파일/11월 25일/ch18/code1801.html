@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="history.back()">뒤로가기</button>
+    </div>
+    <script>
+        let now=new Date();
+        document.writeln('현재 시간: '+now);
+
+        let numbers=[' one', ' two', ' three', ' four'];
+        let numbers2=new Array();
+
+        numbers2[0]='five';
+        let num3=numbers2.concat(numbers);
+
+        document.writeln('<ul>');
+        for(let i=0;i<numbers.length;i++)
+            document.write(`<li> ${num3[i]}</li>`);
+        document.writeln('<ul>');
+
+        // join: 배열 안의 요소 합침
+        let num21=[1,2,3];
+        let str21=num21.join();
+        let str22=numbers.join();
+        document.writeln('<p>'+str22)
+        document.writeln('<p>'+numbers)
+
+        //push, unshift() 배열에 추가
+        let num31=numbers.push(' six', ' seven');
+        document.writeln('<p>push: '+numbers);
+        num31=numbers.unshift(' zero');
+        document.writeln('<p>unshift(): '+num31+' // '+numbers);
+        num31=numbers.pop();
+        document.writeln('<p>pop(): '+num31+' // '+numbers);
+        num31=numbers.shift();
+        document.writeln('<p>shift(): '+num31+' // '+numbers);
+        let numSplice1=numbers.splice(2);
+        document.writeln('<p>splice(): '+numSplice1);
+        document.writeln('<p>numbers: '+numbers);
+        
+        let numbers5=[' one', ' two', ' three', ' four'];
+        let numSplice2=numbers5.splice(1,1);
+        document.writeln('<p>splice(): '+numSplice2);
+        document.writeln('<p>numbers5: '+numbers5);
+
+        let numbers6=[' one', ' two', ' three', ' four'];
+        // let numSplice6=numbers6.splice(1,0,'five');
+        let numSplice6=numbers6.splice(numbers6.length,0,'five');
+        document.writeln('<p>splice(): '+numSplice6);
+        document.writeln('<p>numbers6: '+numbers6);
+    </script>
+</body>
+</html>
